@@ -762,7 +762,7 @@ $tier = wpbm_get_plan_name();
                             $next_scheduled = null;
                             if (class_exists('\WPBlogMailer\Common\Services\ActionSchedulerService') &&
                                 \WPBlogMailer\Common\Services\ActionSchedulerService::is_available()) {
-                                $next_scheduled = \WPBlogMailer\Common\Services\ActionSchedulerService::get_next_scheduled_time('wpbm_send_newsletter');
+                                $next_scheduled = \WPBlogMailer\Common\Services\ActionSchedulerService::get_next_scheduled('wpbm_send_newsletter');
                             }
 
                             // Fallback to WP-Cron if Action Scheduler doesn't have it
