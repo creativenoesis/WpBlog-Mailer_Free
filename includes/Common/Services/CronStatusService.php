@@ -98,8 +98,8 @@ class CronStatusService {
         $where_clause = implode(' AND ', $where);
 
         $query = "SELECT * FROM {$table_name} WHERE {$where_clause}
-                  ORDER BY {$args['order_by']} {$args['order']}
-                  LIMIT %d OFFSET %d";
+          ORDER BY {$args['order_by']} {$args['order']}, id {$args['order']}
+          LIMIT %d OFFSET %d";
 
         $where_values[] = $args['limit'];
         $where_values[] = $args['offset'];

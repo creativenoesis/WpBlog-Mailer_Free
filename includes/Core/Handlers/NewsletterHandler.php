@@ -316,7 +316,7 @@ class NewsletterHandler {
         $cron_status_service = new CronStatusService();
 
         // Log start of execution
-        $log_id = $cron_status_service->log_execution('wpbm_send_newsletter', 'started', 'Newsletter sending started');
+        $log_id = $cron_status_service->log_execution('wpbm_send_newsletter', 'started', 'Checking for new posts');
 
         if (!$this->newsletter_service) {
             $error_msg = 'NewsletterService not initialized';
